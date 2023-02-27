@@ -1,6 +1,6 @@
 # Data-Cleaning-in-SQL
 
-#### 1- Data file is exported in SSMS 
+#### 1- Data file import in SSMS 
 #### 2- Performed data cleaning Task such as 
 ##### --- Removing duplicates using CTEs, Rownumber(), and partition by  window function
 ##### --- Standardize Date Formate  
