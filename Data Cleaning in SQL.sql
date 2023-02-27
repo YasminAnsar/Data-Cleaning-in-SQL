@@ -187,7 +187,7 @@ SELECT *, ROW_NUMBER() OVER(
        PARTITION BY [ParcelID],
 					[SaleDate],
 					[SalePrice],
-					[PropertyAddress],        --CTE will create wor numbers order by uniqueID
+					[PropertyAddress],        --CTE will create row numbers order by uniqueID
 					[LegalReference]
 		            ORDER BY 
                     [UniqueID]) Row_Num
@@ -198,7 +198,7 @@ WHERE  Row_Num > 1
 ORDER BY PropertyAddress
 
 -- now we know we have 104 duplicate rows lets delete them
--- Uisng hte smae CTE and just using delete instead of slect
+-- Uisng the same CTE and just using delete instead of slect
 
 WITH RowNumCTE AS (
 SELECT *, ROW_NUMBER() OVER(
